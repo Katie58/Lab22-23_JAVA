@@ -1,0 +1,123 @@
+
+/*************************** background ****************************/
+
+.background {
+	font-family:"Comic Sans MS", cursive, sans-serif;
+	text-align:center;
+	background:url("/images/wood.jpg");
+	background-color:rgb(35,25,20);
+	background-size:cover;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+}
+
+#home {
+	background:url("/images/javaBean.jpg");
+	background-size:cover;
+}
+
+/********************* containers ************************/
+
+#greeting {
+	width:100%;
+	height:auto;
+	background-color:RGBA(255,255,255,0.5);
+	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
+	position:absolute;
+	top:5px;
+	left:0px;
+	text-align:center;
+	padding:5px;
+}
+
+.register {
+	background:url("/images/register.png");
+	background-size:cover;
+	position:absolute;
+	width:40%;
+	height:20%;
+	left:30%;
+	top:5%;	
+}
+
+.thanks {
+	width:20%;
+	height:20%;
+	background-color:RGBA(255,255,255,0.65);
+	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
+	position:absolute;
+	top:40%;
+	left:40%;
+	text-align:center;
+	padding:5px;
+}
+
+/************************** text *************************/
+
+h1 {
+	color:rgb(55,35,15);
+}
+
+/************************** table *************************/
+
+table {
+	position:absolute;
+	width:60%;
+	left:25%;
+	top:15%;
+}
+
+td {
+	font-family:"Comic Sans MS", cursive, sans-serif;
+	text-align:left;
+	padding:2.5%;
+}
+
+/************************* input **************************/
+
+form {
+	width:40%;
+	height:50%;
+	background-color:RGBA(255,255,255,0.65);
+	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
+	position:absolute;
+	top:25%;
+	left:30%;
+	text-align:center;
+	padding:5px;
+}
+
+button {
+	width:40%;
+	height:15%;
+	background:url("/images/submit.png");
+	background-size:cover;
+	background-color:RGBA(255,255,255,0.65);
+	box-shadow: 0 25px 50px -15px RGBA(0,0,0,0.85);
+	position:absolute;
+	bottom:5%;
+	left:30%;
+}
+
+input:invalid {
+	border:2px solid rgb(55,35,15);;
+}
+
+a {
+	color:crimson;
+}
+
+/********************* fill/overlay *************************/
+
+.overlay { 
+	width:100%; 
+	height:100%; 
+	background-color:RGBA(255,255,255,0.50);
+	position:absolute; 
+	top:0px;
+	left:0px;
+
+}
