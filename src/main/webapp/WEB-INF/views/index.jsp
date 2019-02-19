@@ -9,9 +9,9 @@
 </head>
 <body>
 	<div class="background" id="home">
-	<div class="overlay">
-		<h1 id="greeting">Welcome to the javaBean! <a href="/register-user">Register</a> now!</h1>
-	</div>
+		<div class="overlay">
+			<h1 id="greeting">Welcome to the javaBean! <a href="/register-user">Register</a> now!</h1>
+		</div>
 	</div>
 </body>
 </html>

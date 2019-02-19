@@ -9,31 +9,34 @@
 <title>Registration</title>
 </head>
 <body>
-<div class="background">
+<div class="background" id="background-image">
 	<div class="register"></div>
 	
 	<form action="/user-confirmation" onsubmit="return validateForm()" method="post">
-	<table>
-		<tr>
-			<td>First Name:</td><td><input name="firstname" pattern="[A-Z]{1}[A-z]{0,30}" required/></td>
-		</tr>
-		<tr>
-			<td>Last Name:</td><td><input name="lastname" pattern="[A-Z]{1}[A-z]{0,30}" required/></td>
-		</tr>
-		<tr>
-			<td>Email:</td><td><input name="email" type="email" required/></td>
-		</tr>
-		<tr>
-			<td>Age:</td><td><input name="age" type="number" min="1" max="120" required/></td>
-		</tr>
-		<tr>
-			<td>Password:</td><td><input name="password" type="password" required/></td>
-		</tr>
-	</table>
-		<p>
+		<fieldset class="left">
+			<table>
+				<tr>
+					<th>Join our newsletter!</th>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset class="center">
+			<br><br><strong>&nbsp;&nbsp;&nbsp;PLEASE FILL THE FORM BELOW</strong><br><hr>
+			<p><div class="form-left">First Name:</div><div class="form-right"><input name="firstname" pattern="[A-Z]{1}[A-z]{0,30}" required/></div></p>
+			<p><div class="form-left">Last Name:</div><div class="form-right"><input name="lastname" pattern="[A-Z]{1}[A-z]{0,30}" required/></div></p>
+			<p><div class="form-left">Email:</div><div class="form-right"><input name="email" type="email" required/></div></p>
+			<p><div class="form-left">Age:</div><div class="form-right"><input name="age" type="number" min="1" max="120" required/></div></p>
+			<p><div class="form-left">Password:</div><div class="form-right"><input name="password" type="password" required/></div></p>
 			<button type="submit"></button>
-		</p>
-
+		</fieldset>
+		<fieldset class="right">
+			<table>
+				<tr>
+					<th>Take our optional survey...</th>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
 	</form>
 	</div>
 </body>

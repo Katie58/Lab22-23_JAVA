@@ -9,7 +9,7 @@
 <title>Confirmation</title>
 </head>
 <body>
-<div class="background">
+<div class="background" id="background-image">
 	<div class="thanks">
 		<h1>Thanks.</h1>
 		
