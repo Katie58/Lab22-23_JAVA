@@ -26,14 +26,47 @@
 /********************* containers ************************/
 
 #greeting {
-	width:100%;
+	width:40%;
 	background-color:RGBA(255,255,255,0.5);
 	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
 	position:absolute;
 	top:.5%;
-	left:0px;
+	left:30%;
 	text-align:center;
 	padding:.5%;
+}
+
+#register {
+	width:15%;
+	background:url("/images/register.png");
+	background-color:RGBA(255,255,255,0.5);
+	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
+	position:absolute;
+	top:.5%;
+	left:10%;
+	text-align:center;
+	padding:.5%;
+}
+
+#shop {
+	width:15%;
+	background-color:RGBA(255,255,255,0.5);
+	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
+	position:absolute;
+	top:.5%;
+	left:75%;
+	text-align:center;
+	padding:.5%;
+}
+
+.list {
+	width:40%;
+	height:50%;
+	background-color:RGBA(255,255,255,0.65);
+	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
+	position:absolute;
+	top:25%;
+	left:30%;
 }
 
 .register {
@@ -52,10 +85,13 @@
 	background-color:RGBA(255,255,255,0.65);
 	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
 	position:absolute;
-	top:40%;
-	left:40%;
+	top:35%;
+	left:35%;
 	text-align:center;
-	padding:5%;
+	padding-top:5%;
+	padding-bottom:5%;
+	padding-left:5%;
+	padding-right:5%;
 }
 
 fieldset {
@@ -97,6 +133,10 @@ fieldset {
 	padding:2.5%;
 	width:60%;
 	float:right;
+}
+
+.newsletter {
+	padding:5%;
 }
 
 /************************** text *************************/
@@ -142,6 +182,20 @@ input:invalid {
 
 input:valid {
 	border:.125vw solid rgb(250,235,215);
+}
+
+#left {
+	width:50%;
+	position:relative;
+	text-align:center;
+	float:left;
+}
+
+#right {
+	width:50%;
+	position:relative;
+	text-align:center;
+	float:right;
 }
 
 a {

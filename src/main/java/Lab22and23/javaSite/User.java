@@ -2,14 +2,25 @@ package Lab22and23.javaSite;
 
 public class User {
 
+	private Long id;
 	private String firstname;
 	private String lastname;
 	private String email;
 	private int age;
 	private String password;
-	private String car;
+	private boolean newsletter;
 	
 	public User() {}
+	
+	public User(Long id, String firstname, String lastname, String email, int age, String password, boolean newsletter) {
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.age = age;
+		this.password = password;
+		this.newsletter = newsletter;
+	}
 	
 	public User(String firstname, String lastname, String email, int age, String password) {
 		this.firstname = firstname;
@@ -19,8 +30,8 @@ public class User {
 		this.password = password;
 	}
 	
-	public void setCar(String car) {
-		this.car = car;
+	public void setId(Long id) {
+		this.id = id;
 	}
 	
 	public void setFirstname(String firstname) {
@@ -43,6 +54,14 @@ public class User {
 		this.password = password;
 	}
 	
+	public void setNewsletter(boolean newsletter) {
+		this.newsletter = newsletter;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+	
 	public String getFirstname() {
 		return firstname;
 	}
@@ -61,6 +80,10 @@ public class User {
 	
 	public String getPassword() {
 		return password;
+	}
+	
+	public boolean getNewsletter() {
+		return newsletter;
 	}
 	
 	@Override

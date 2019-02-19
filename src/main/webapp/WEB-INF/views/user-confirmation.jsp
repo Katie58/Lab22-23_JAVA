@@ -16,6 +16,7 @@
 		<p>
 			<%-- Dot notation to access getters in Expression Language. --%>
 			${ user.firstname }, you are registered. 
+			
 		</p>
 		<p>	
 			Return <a href="/">home</a>.

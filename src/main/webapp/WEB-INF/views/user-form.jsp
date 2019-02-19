@@ -10,15 +10,14 @@
 </head>
 <body>
 <div class="background" id="background-image">
-	<div class="register"></div>
-	
+	<div class="register"></div>	
 	<form action="/user-confirmation" onsubmit="return validateForm()" method="post">
-		<fieldset class="left">
-			<table>
-				<tr>
-					<th>Join our newsletter!</th>
-				</tr>
-			</table>
+		<fieldset class="left">			
+			Join our newsletter!
+			<div class="newsletter">
+				<div id="left"><input type="radio" name="newsletter" value="true"><small>yes</small></div>
+  				<div id="right"><input type="radio" name="newsletter" value="false"><small>no</small></div> 				
+  			</div>
 		</fieldset>
 		<fieldset class="center">
 			<br><br><strong>&nbsp;&nbsp;&nbsp;PLEASE FILL THE FORM BELOW</strong><br><hr>
@@ -30,11 +29,9 @@
 			<button type="submit"></button>
 		</fieldset>
 		<fieldset class="right">
-			<table>
-				<tr>
-					<th>Take our optional survey...</th>
-				</tr>
-			</table>
+
+				Take our optional survey...
+
 		</fieldset>
 		<fieldset>
 	</form>
