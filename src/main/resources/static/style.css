@@ -79,6 +79,16 @@
 	top:5%;	
 }
 
+.shop {
+	background:url("/images/shop.png");
+	background-size:cover;
+	position:absolute;
+	width:40%;
+	height:20%;
+	left:30%;
+	top:5%;
+}
+
 .thanks {
 	width:20%;
 	height:20%;
@@ -92,6 +102,16 @@
 	padding-bottom:5%;
 	padding-left:5%;
 	padding-right:5%;
+}
+
+.shop-itemsboard {
+	width:60%;
+	height:50%;
+	background-color:RGBA(255,255,255,0.65);
+	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
+	position:absolute;
+	top:25%;
+	left:20%;
 }
 
 fieldset {
@@ -139,10 +159,59 @@ fieldset {
 	padding:5%;
 }
 
+.quarter {
+	text-align:left;
+	padding-left:2.5%;
+	padding-right:2.5%;
+	padding-top:2.5%;
+	width:25%;
+	float:left;
+}
+
+.eighth {
+	text-align:left;
+	padding-left:2.5%;
+	padding-right:2.5%;
+	padding-top:2.5%;
+	width:12.5%;
+	float:left;
+}
+
+.description {
+	text-align:left;
+	padding-left:2.5%;
+	padding-right:2.5%;
+	padding-top:2.5%;
+	width:25%;
+	float:left;
+}
+
+.row {
+	width:100%;
+	height:auto;
+}
+
 /************************** text *************************/
 
 h1 {
 	color:rgb(55,35,15);
+}
+
+#header {
+	font-size:1.5vw;
+}
+
+#header-center {
+	font-size:1.5vw;
+	text-align:center;
+}
+
+#strong-center {
+	text-align:center;
+}
+
+#shop-items {
+
 }
 
 /************************* input **************************/
@@ -160,13 +229,34 @@ form {
 button {
 	width:40%;
 	height:15%;
-	background:url("/images/submit.png");
-	background-size:cover;
 	background-color:RGBA(255,255,255,0.65);
 	box-shadow: 0 25px 50px -15px RGBA(0,0,0,0.85);
 	position:absolute;
 	bottom:5%;
 	left:30%;
+}
+
+#submit {
+	
+	background:url("/images/submit.png");
+	background-size:cover;
+}
+
+#add {
+	background:url("/images/add.png");
+	background-size:cover;
+}
+
+#add-item {
+	background:url("/images/addItem.png");
+	background-size:cover;
+	width:25%;
+	height:15%;
+	background-color:RGBA(255,255,255,0.65);
+	box-shadow: 0 5px 25px -15px RGBA(0,0,0,0.85);
+	position:absolute;
+	bottom:5%;
+	left:37.5%;
 }
 
 input {
@@ -214,15 +304,18 @@ a {
 
 }
 
-.clearfloat {
+.clear-float {
 	clear:left;
 	clear:right;
 }
 
 hr {
 	background-color:rgb(55,35,15);
-	margin-left:5%;
 	width:100%;
 	height:.25vw;
 	border:none;
+}
+
+#move-right {
+	margin-left:5%;
 }

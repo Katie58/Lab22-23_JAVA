@@ -10,25 +10,29 @@
 </head>
 <body>
 	<div class="background" id="background-image">
-		<h1>javaBean shop</h1>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Item</th><th>Description</th><th>Quantity</th><th>Price</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="item" items="${items}">
-				<tr>
-					<td><a href="/javaBeanShop/${item.id}">${item.name}</a></td>
-					<td>${item.description}
-					<td>${item.quantity}</td>
-					<td>${item.price}</td>
-				</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		<a href="/javaBeanShop/add" class="btn btn-secondary">Add Item</a>
+	<div class="shop"></div>
+	<div class="shop-itemsboard">
+		<fieldset id="header">
+			<div class="row">
+				<div class="quarter" id="header-center">Item</div>
+				<div class="description" id="header">Description</div>
+				<div class="eighth" id="header">Price</div>
+				<div class="eighth" id="header">Quantity</div>
+			</div>
+		</fieldset>
+		</fieldset>
+			<div class="row"><hr></div>
+			<c:forEach var="item" items="${items}">
+				<div class="row" id="shop-items">
+					<div class="quarter" id="strong-center"><a href="/javaBeanShop/${item.id}">${item.name}</a></div>
+					<div class="description">${item.description}</div>
+					<div class="eighth">${item.price}</div>
+					<div class="eighth">${item.quantity}</div>
+				</div>
+			</c:forEach>		
+		</fieldset>
+		<a id="add-item" href="/javaBeanShop/add"></a>	
+	</div>
 	</div>
 </body>
 </html>

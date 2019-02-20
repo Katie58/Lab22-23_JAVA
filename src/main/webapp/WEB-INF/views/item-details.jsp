@@ -5,29 +5,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../style.css">
 <title>${item.name} details</title>
 </head>
 <body>
 	<div class="background" id="background-image">
+	<form>
 		<h1>${item.name}</h1>
-		<table class="table">
-			<tr>
-				<th scope="row">Description</th>
-				<td>${item.description}</td>
-			</tr>
-			<tr>
-				<th scope="row">Quantity</th>
-				<td>${item.quantity}</td>
-			</tr>
-			<tr>
-				<th scope="row">Price</th>
-				<td>${item.price}</td>
-			</tr>
-		</table>
-		<a class="btn btn-secondary" href="/javaBeanShop/${item.id}/edit">Edit</a>
-		<a class="btn btn-danger" href="/javaBeanShop/${item.id}/delete">Delete</a>
-		<a class="btn link" href="/javaBeanShop">Back to Shop</a>
+		<fieldset class="left"></fieldset>
+		<fieldset class="center">
+			<br><br><strong>&nbsp;&nbsp;&nbsp;Add an Item</strong><br><hr>
+			<p><div class="form-left">Description:</div><div class="form-right">${item.description}</div></p>
+			<p><div class="form-left">Quantity:</div><div class="form-right">${item.quantity}</div></p>
+			<p><div class="form-left">Price:</div><div class="form-right">${item.price}"</div></p>
+		</fieldset>
+		<fieldset class="right"></fieldset>
+		<a class="left" id="left" style="width:30% bottom:5%" href="/javaBeanShop/${item.id}/edit">Edit</a>
+		<a class="center" id="center" style="width:30% bottom:5%" href="/javaBeanShop/${item.id}/delete">Delete</a>
+		<a class="right" id="right" style="width:30% bottom:5%" href="/javaBeanShop">Back to Shop</a>
+	</form>
 	</div>
 </body>
 </html>

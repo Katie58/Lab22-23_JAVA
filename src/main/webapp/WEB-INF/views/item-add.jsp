@@ -5,34 +5,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../../style.css">
 <title>add item</title>
 </head>
 <body>
 	<div class="background" id="background-image">
 		<h1>javaBeanShop</h1>
-		<h2>Add an item</h2>
-		<form action="/javaBeanShop/add" method="post">
-		<table class="table">
-			<tr>
-				<th scope="row">Name</th>
-				<td><input type="text" name="name" autofocus/></td>
-			</tr>
-			<tr>
-				<th scope="row">Description</th>
-				<td><input type="text" name="description" /></td>
-			</tr>
-			<tr>
-				<th scope="row">Quantity</th>
-				<td><input type="number" name="quantity" /></td>
-			</tr>
-			<tr>
-				<th scope="row">Price</th>
-				<td><input type="number" step=".01" name="price" /></td>
-			</tr>
-		</table>
-		<button type="submit" class="btn btn-primary" href="/javaBeanShop/add">Add</button>
-		<a class="btn link" href="/javaBeanShop">Cancel</a>
+		<form action="/javaBeanShop/add" onsubmit="return validateForm()" method="post">
+		<fieldset class="left"></fieldset>
+		<fieldset class="center">
+			<br><br><strong>&nbsp;&nbsp;&nbsp;Add an Item</strong><br><hr>
+			<p><div class="form-left">Name:</div><div class="form-right"><input name="name" required/></div></p>
+			<p><div class="form-left">Description:</div><div class="form-right"><input name="description" required/></div></p>
+			<p><div class="form-left">Quantity:</div><div class="form-right"><input name="quantity" type="number" required/></div></p>
+			<p><div class="form-left">Price:</div><div class="form-right"><input name="price" type="number" step=".01" required/></div></p>
+		</fieldset>
+		<fieldset class="right">
+		<div id="add" type="submit" href="/javaBeanShop/add"></div>
+		<a href="/javaBeanShop">Cancel</a>
+		</fieldset>
 		</form>
 	</div>
 </body>
