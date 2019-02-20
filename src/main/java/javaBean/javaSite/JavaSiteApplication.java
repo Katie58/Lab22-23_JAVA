@@ -1,4 +1,4 @@
-package Lab22and23.javaSite;
+package javaBean.javaSite;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

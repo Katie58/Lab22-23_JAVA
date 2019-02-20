@@ -182,13 +182,8 @@ fieldset {
 	padding-left:2.5%;
 	padding-right:2.5%;
 	padding-top:2.5%;
-	width:25%;
+	width:35%;
 	float:left;
-}
-
-.row {
-	width:100%;
-	height:auto;
 }
 
 /************************** text *************************/
@@ -203,6 +198,10 @@ h1 {
 
 #header-center {
 	font-size:1.5vw;
+	text-align:center;
+}
+
+#center {
 	text-align:center;
 }
 

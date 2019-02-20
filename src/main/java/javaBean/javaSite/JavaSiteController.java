@@ -1,4 +1,4 @@
-package Lab22and23.javaSite;
+package javaBean.javaSite;
 
 import java.util.List;
 
@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import Lab22and23.javaSite.UsersDAO;
-import Lab22and23.javaSite.ItemsDAO;
+import javaBean.javaSite.dao.ItemsDAO;
+import javaBean.javaSite.dao.UsersDAO;
+import javaBean.javaSite.entity.Item;
+import javaBean.javaSite.entity.User;
 
 @Controller
 public class JavaSiteController {

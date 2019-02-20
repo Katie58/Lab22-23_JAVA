@@ -1,4 +1,4 @@
-package Lab22and23.javaSite;
+package javaBean.javaSite.dao;
 
 import java.util.List;
 
@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import Lab22and23.javaSite.Item;
+import javaBean.javaSite.entity.Item;
 
 @Repository
 public class ItemsDAO {

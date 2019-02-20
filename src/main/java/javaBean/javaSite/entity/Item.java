@@ -1,4 +1,4 @@
-package Lab22and23.javaSite;
+package javaBean.javaSite.entity;
 
 public class Item {
 	
