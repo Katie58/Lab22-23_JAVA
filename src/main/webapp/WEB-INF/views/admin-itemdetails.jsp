@@ -10,8 +10,8 @@
 </head>
 <body>
 	<div class="background" id="background-image">
-	<form>
-		<div class="cowboy1">${item.name}</div>
+	<div class="cowboy1">${item.name}</div>
+	<form>		
 		<fieldset class="left"></fieldset>
 		<fieldset class="center">
 			<br><br><strong>&nbsp;&nbsp;&nbsp;Item Details</strong><br><hr>

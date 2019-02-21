@@ -6,12 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="../../../style.css">
-<title>${user.name}'s details</title>
+<title>${user.firstname}'s details</title>
 </head>
-<body>
+<body>	
 	<div class="background" id="background-image">
+	<div class="cowboy1">${user.firstname}</div>
 	<form>
-		<div class="cowboy1">${user.name}</div>
 		<fieldset class="left"></fieldset>
 		<fieldset class="center">
 			<br><br><strong>&nbsp;&nbsp;&nbsp;User details</strong><br><hr>
