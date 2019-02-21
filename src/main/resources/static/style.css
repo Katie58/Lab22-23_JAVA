@@ -38,7 +38,6 @@
 
 #register {
 	width:15%;
-	background:url("/images/register.png");
 	background-color:RGBA(255,255,255,0.5);
 	box-shadow: 0 25px 25px -10px RGBA(0,0,0,0.85);
 	position:absolute;
@@ -69,26 +68,6 @@
 	left:30%;
 }
 
-.register {
-	background:url("/images/register.png");
-	background-size:cover;
-	position:absolute;
-	width:40%;
-	height:20%;
-	left:30%;
-	top:5%;	
-}
-
-.shop {
-	background:url("/images/shop.png");
-	background-size:cover;
-	position:absolute;
-	width:40%;
-	height:20%;
-	left:30%;
-	top:5%;
-}
-
 .thanks {
 	width:20%;
 	height:20%;
@@ -112,6 +91,21 @@
 	position:absolute;
 	top:25%;
 	left:20%;
+}
+
+.admin-select {
+	position:absolute;
+	width:40%;
+	height:20%;
+	top:5%;	
+}
+
+#items {
+	left:10%;
+}
+
+#users {
+	right:10%;
 }
 
 fieldset {
@@ -177,19 +171,48 @@ fieldset {
 	float:left;
 }
 
-.description {
+.edit {
 	text-align:left;
 	padding-left:2.5%;
 	padding-right:2.5%;
 	padding-top:2.5%;
-	width:35%;
+	width:5%;
+	float:left;
+}
+
+.delete {
+	text-align:left;
+	padding-left:2.5%;
+	padding-right:2.5%;
+	padding-top:2.5%;
+	width:0.5%;
+	height:5%;
 	float:left;
 }
 
 /************************** text *************************/
 
-h1 {
+@font-face {
+  font-family:OlCowboy;
+  src: url(/fonts/OlCowboy.ttf) format('truetype');
+}
+
+.cowboy1 {
+	font-family:OlCowboy;
 	color:rgb(55,35,15);
+	font-size:5vw;
+}
+
+.cowboy2 {
+	font-family:OlCowboy;
+	color:rgb(55,35,15);
+	font-size:1.5vw;
+}
+
+.cowboy3 {
+	font-family:OlCowboy;
+	color:rgb(55,35,15);
+	font-size:1.125vw;
 }
 
 #header {
@@ -203,14 +226,6 @@ h1 {
 
 #center {
 	text-align:center;
-}
-
-#strong-center {
-	text-align:center;
-}
-
-#shop-items {
-
 }
 
 /************************* input **************************/
@@ -235,27 +250,36 @@ button {
 	left:30%;
 }
 
-#submit {
-	
-	background:url("/images/submit.png");
+#btn-edit {
+	width:2.5%;
+	height:2.5%;
+	text-align:center;
+	box-shadow: 0 5px 25px -15px RGBA(0,0,0,0.85);	
+}
+
+#btn-delete {
+	text-align:center;
+	background:url(/images/trash.png) no-repeat;
 	background-size:cover;
 }
 
-#add {
-	background:url("/images/add.png");
-	background-size:cover;
-}
-
-#add-item {
-	background:url("/images/addItem.png");
-	background-size:cover;
+#clickbox-lrg {
 	width:25%;
-	height:15%;
+	height:10%;
+	padding-top:1%;
 	background-color:RGBA(255,255,255,0.65);
 	box-shadow: 0 5px 25px -15px RGBA(0,0,0,0.85);
 	position:absolute;
 	bottom:5%;
 	left:37.5%;
+}
+
+#clickbox-sml {
+	width:20%;
+	height:15%;
+	padding:5%;
+	text-align:center;
+	box-shadow: 0 5px 25px -15px RGBA(0,0,0,0.85);
 }
 
 input {
@@ -308,11 +332,19 @@ a {
 	clear:right;
 }
 
-hr {
+hr.list {
+	background-color:RGBA(55,35,15,0.125);
+	width:75%;
+	height:.125vw;
+	border:none;
+	float:left;
+}
+
+hr.thick {
 	background-color:rgb(55,35,15);
 	width:100%;
 	height:.25vw;
-	border:none;
+	border:none;	
 }
 
 #move-right {

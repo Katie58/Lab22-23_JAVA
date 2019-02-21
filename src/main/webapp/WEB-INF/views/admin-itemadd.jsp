@@ -10,8 +10,8 @@
 </head>
 <body>
 	<div class="background" id="background-image">
-		<h1>javaBeanShop</h1>
-		<form action="/javaBeanShop/add" onsubmit="return validateForm()" method="post">
+		<div class="cowboy1">javaBeanShop</div>
+		<form action="/admin/item/add" onsubmit="return validateForm()" method="post">
 		<fieldset class="left"></fieldset>
 		<fieldset class="center">
 			<br><br><strong>&nbsp;&nbsp;&nbsp;Add an Item</strong><br><hr>
@@ -21,8 +21,8 @@
 			<p><div class="form-left">Price:</div><div class="form-right"><input name="price" type="number" step=".01" required/></div></p>
 		</fieldset>
 		<fieldset class="right">
-		<div id="add" type="submit" href="/javaBeanShop/add"></div>
-		<a href="/javaBeanShop">Cancel</a>
+		<button id="clickbox-small" type="submit" href="/admin/item/add"><div class="cowboy3">ADD</div></button>
+		<a href="/admin/items">Cancel</a>
 		</fieldset>
 		</form>
 	</div>

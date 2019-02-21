@@ -1,7 +1,16 @@
-package javaBean.javaSite.entity;
+package jB.cafe.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="items")
 public class Item {
 	
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String name;
 	private String description;
@@ -9,6 +18,13 @@ public class Item {
 	private double price;
 
 	public Item() {}
+	
+	public Item(String name, String description, int quantity, double price) {
+		this.name = name;
+		this.description = description;
+		this.quantity = quantity;
+		this.price = price;
+	}
 	
 	public Item(Long id, String name, String description, int quantity, double price) {
 		this.id = id;

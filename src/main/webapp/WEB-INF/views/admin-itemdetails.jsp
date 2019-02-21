@@ -20,7 +20,9 @@
 			<p><div class="form-left">Price:</div><div class="form-right">${item.price}"</div></p>
 		</fieldset>
 		<fieldset class="right"></fieldset>
-		<a class="right" id="right" style="width:30% bottom:5%" href="/javaBeanShop">Back to Shop</a>
+		<a class="left" id="left" style="width:30% bottom:5%" href="/admin/item${item.id}/edit">Edit</a>
+		<a class="center" id="center" style="width:30% bottom:5%" href="/admin/item${item.id}/delete">Delete</a>
+		<a class="right" id="right" style="width:30% bottom:5%" href="/admin/items">Back to Shop</a>
 	</form>
 	</div>
 </body>

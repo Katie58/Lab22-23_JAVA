@@ -1,26 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="style.css">
-<title>Registration</title>
+<link rel="stylesheet" href="../../style.css">
+<title>add item</title>
 </head>
 <body>
-<div class="background" id="background-image">
-	<div class="cowboy">REGISTER</div>
-	<form action="/user-confirmation" onsubmit="return validateForm()" method="post">
-		<fieldset class="left">			
-			Join our newsletter!
-			<div class="newsletter">
-				<div id="left"><input type="radio" name="newsletter" value="true"><small>yes</small></div>
-  				<div id="right"><input type="radio" name="newsletter" value="false"><small>no</small></div> 				
-  			</div>
-		</fieldset>
+	<div class="background" id="background-image">
+		<div class="cowboy1">javaBeanShop</div>
+		<form action="/admin/user/add" onsubmit="return validateForm()" method="post">
+		<fieldset class="left"></fieldset>
 		<fieldset class="center">
-			<br><br><strong>&nbsp;&nbsp;&nbsp;PLEASE FILL THE FORM BELOW</strong><br><hr id="move-right">
+			<br><br><strong>&nbsp;&nbsp;&nbsp;Add a User</strong><br><hr>
 			<p><div class="form-left">First Name:</div><div class="form-right"><input name="firstname" pattern="[A-Z]{1}[A-z]{0,30}" required/></div></p>
 			<p><div class="form-left">Last Name:</div><div class="form-right"><input name="lastname" pattern="[A-Z]{1}[A-z]{0,30}" required/></div></p>
 			<p><div class="form-left">Email:</div><div class="form-right"><input name="email" type="email" required/></div></p>
@@ -29,12 +23,10 @@
 			<button id="submit" type="submit"></button>
 		</fieldset>
 		<fieldset class="right">
-
-				Take our optional survey...
-
+		<button id="clickbox-small" type="submit" href="/admin/user/add"><div class="cowboy3">ADD</div></button>
+		<a href="/admin/users">Cancel</a>
 		</fieldset>
-		<fieldset>
-	</form>
+		</form>
 	</div>
 </body>
 </html>
