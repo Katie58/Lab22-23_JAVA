@@ -5,13 +5,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../../style.css">
 <title>${user.name}'s details</title>
 </head>
 <body>
 	<div class="background" id="background-image">
 	<form>
-		<h1>${user.name}</h1>
+		<div class="cowboy1">${user.name}</div>
 		<fieldset class="left"></fieldset>
 		<fieldset class="center">
 			<br><br><strong>&nbsp;&nbsp;&nbsp;User details</strong><br><hr>
@@ -21,8 +21,8 @@
 			<p><div class="form-left">Password:</div><div class="form-right">${user.password}"</div></p>
 		</fieldset>
 		<fieldset class="right"></fieldset>
-		<a class="left" id="left" style="width:30% bottom:5%" href="/admin/user${user.id}/edit">Edit</a>
-		<a class="center" id="center" style="width:30% bottom:5%" href="/admin/user${user.id}/delete">Delete</a>
+		<a class="left" id="left" style="width:30% bottom:5%" href="/admin/user/${user.id}/edit">Edit</a>
+		<a class="center" id="center" style="width:30% bottom:5%" href="/admin/user/${user.id}/delete">Delete</a>
 		<a class="right" id="right" style="width:30% bottom:5%" href="/admin/users">Back to Users</a>
 	</form>
 	</div>

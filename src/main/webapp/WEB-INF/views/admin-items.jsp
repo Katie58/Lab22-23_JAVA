@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="style.css">
-<title>javaBean shop</title>
+<link rel="stylesheet" href="../../../style.css">
+<title>javaBean items</title>
 </head>
 <body>
 	<div class="background" id="background-image">
@@ -26,7 +26,7 @@
 			<div><hr class="thick"></div>
 			<c:forEach var="item" items="${items}">
 				<div>
-					<div class="eighth" id="center"><a id="btn-sml" href="/admin/item${item.id}/">${item.name}</a></div>
+					<div class="eighth" id="center"><a id="btn-sml" href="/admin/item/${item.id}/">${item.name}</a></div>
 					<div class="quarter">${item.description}</div>
 					<div class="eighth" id="center">${item.price}</div>
 					<div class="eighth" id="center">${item.quantity}</div>	
@@ -36,7 +36,7 @@
 				<div><hr class="list"></div>
 			</c:forEach>		
 		</fieldset>
-		<div class="cowboy1"><a id="clickbox-lrg" href="/admin/item/add">add an item</a></div>
+		<div class="cowboy2"><a id="clickbox-lrg" href="/admin/item/add">add an item</a></div>
 	</div>
 	</div>
 </body>

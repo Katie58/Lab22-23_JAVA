@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="background" id="background-image">
-	<div class="cowboy">REGISTER</div>
+	<div class="cowboy1">REGISTER</div>
 	<form action="/user-confirmation" onsubmit="return validateForm()" method="post">
 		<fieldset class="left">			
 			Join our newsletter!
@@ -26,14 +26,14 @@
 			<p><div class="form-left">Email:</div><div class="form-right"><input name="email" type="email" required/></div></p>
 			<p><div class="form-left">Age:</div><div class="form-right"><input name="age" type="number" min="1" max="120" required/></div></p>
 			<p><div class="form-left">Password:</div><div class="form-right"><input name="password" type="password" required/></div></p>
-			<button id="submit" type="submit"></button>
+			<button class="cowboy2" id="submit" type="submit">submit</button>
 		</fieldset>
 		<fieldset class="right">
 
 				Take our optional survey...
-
+				
 		</fieldset>
-		<fieldset>
+		<p style="padding-top:75%">Return <a href="/">home</a>.</p>
 	</form>
 	</div>
 </body>

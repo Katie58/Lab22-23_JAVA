@@ -63,21 +63,21 @@ public class JavaSiteController {
 		return new ModelAndView("admin-items", "items", leListOfItems);
 	}
 		
-	@RequestMapping("/admin/item{id}/")
+	@RequestMapping("/admin/item/{id}/")
 	public ModelAndView adminItemDetail(@PathVariable("id") Long id) {
 		Item item = itemsDao.findById(id);
 		
 		return new ModelAndView("admin-itemdetails", "item", item);
 	}
 	
-	@RequestMapping("/admin/item{id}/edit")
+	@RequestMapping("/admin/item/{id}/edit")
 	public ModelAndView adminItemEdit(@PathVariable("id") Long id) {
 		Item item = itemsDao.findById(id);
 		
 		return new ModelAndView("admin-itemedit", "item", item);
 	}
 	
-	@PostMapping("/admin/item{id}/edit")
+	@PostMapping("/admin/item/{id}/edit")
 	public ModelAndView adminItemSave(@PathVariable("id") Long id, Item item) {
 		item.setId(id);
 		
@@ -86,7 +86,7 @@ public class JavaSiteController {
 		return new ModelAndView("redirect:/admin/" + id);
 	}
 		
-	@RequestMapping("/admin/item{id}/delete")
+	@RequestMapping("/admin/item/{id}/delete")
 	public ModelAndView adminItemRemove(@PathVariable("id") Long id) {
 		itemsDao.delete(id);
 		
@@ -111,21 +111,21 @@ public class JavaSiteController {
 		return new ModelAndView("admin-users", "users", leListOfUsers);
 	}
 	
-	@RequestMapping("/admin/user{id}/")
+	@RequestMapping("/admin/user/{id}/")
 	public ModelAndView adminUserDetail(@PathVariable("id") Long id) {
 		User user = usersDao.findById(id);
 		
 		return new ModelAndView("admin-userdetails", "user", user);
 	}
 	
-	@RequestMapping("/admin/user{id}/edit")
+	@RequestMapping("/admin/user/{id}/edit")
 	public ModelAndView adminUserEdit(@PathVariable("id") Long id) {
 		User user = usersDao.findById(id);
 		
 		return new ModelAndView("admin-useredit", "user", user);
 	}
 	
-	@PostMapping("/admin/user{id}/edit")
+	@PostMapping("/admin/user/{id}/edit")
 	public ModelAndView adminUserSave(@PathVariable("id") Long id, User user) {
 		user.setId(id);
 		
@@ -134,7 +134,7 @@ public class JavaSiteController {
 		return new ModelAndView("redirect:/admin/" + id);
 	}
 	
-	@RequestMapping("/admin/user{id}/delete")
+	@RequestMapping("/admin/user/{id}/delete")
 	public ModelAndView adminUserRemove(@PathVariable("id") Long id) {
 		usersDao.delete(id);
 		

@@ -5,12 +5,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="../../style.css">
-<title>add item</title>
+<link rel="stylesheet" href="../../../style.css">
+<title>add user</title>
 </head>
 <body>
 	<div class="background" id="background-image">
-		<div class="cowboy1">javaBeanShop</div>
+		<div class="cowboy1"><br>add user</div>
 		<form action="/admin/user/add" onsubmit="return validateForm()" method="post">
 		<fieldset class="left"></fieldset>
 		<fieldset class="center">
@@ -23,7 +23,7 @@
 			<button id="submit" type="submit"></button>
 		</fieldset>
 		<fieldset class="right">
-		<button id="clickbox-small" type="submit" href="/admin/user/add"><div class="cowboy3">ADD</div></button>
+		<button id="clickbox-small" type="submit" href="/admin/user/add"><div class="cowboy2">ADD</div></button>
 		<a href="/admin/users">Cancel</a>
 		</fieldset>
 		</form>

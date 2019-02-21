@@ -11,7 +11,7 @@
 <body>
 	<div class="background" id="background-image">
 		<h1>Edit ${user.name}'s Details</h1>
-		<form action="/admin/${user.id}/edit" onsubmit="return validateForm()" method="post">
+		<form action="/admin/user/${user.id}/edit" onsubmit="return validateForm()" method="post">
 		<fieldset class="left"></fieldset>
 		<fieldset class="center">
 			<br><br><strong>&nbsp;&nbsp;&nbsp;User Details</strong><br><hr>
@@ -21,7 +21,7 @@
 			<p><div class="form-left">Password:</div><div class="form-right"><input type="number" step=".01" name="price" value="${user.password}" required/></div></p>
 		</fieldset>
 		<button type="submit">Save Changes</button>
-		<a href="/admin/${user.id}">Cancel</a>
+		<a href="/admin/user/${user.id}/">Cancel</a>
 		</form>
 	</div>
 </body>

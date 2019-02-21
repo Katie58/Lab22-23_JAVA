@@ -32,6 +32,7 @@
 				<div><hr class="list"></div>
 			</c:forEach>		
 		</fieldset>
+		<p style="bottom:5%">Return <a href="/">home</a>.</p>
 	</div>
 	</div>
 </body>
