@@ -25,6 +25,7 @@
 		<a href="/admin/items">Cancel</a>
 		</fieldset>
 		</form>
+			<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>

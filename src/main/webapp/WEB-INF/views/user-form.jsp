@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="background" id="background-image">
-	<div class="cowboy1">REGISTER</div>
+	<div class="cowboy1"><br>REGISTER</div>
 	<form action="/user-confirmation" onsubmit="return validateForm()" method="post">
 		<fieldset class="left">			
 			Join our newsletter!
@@ -33,8 +33,8 @@
 				Take our optional survey...
 				
 		</fieldset>
-		<p style="padding-top:75%">Return <a href="/">home</a>.</p>
 	</form>
+	<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>

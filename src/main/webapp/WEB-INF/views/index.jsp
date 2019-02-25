@@ -8,13 +8,15 @@
 <link rel="stylesheet" href="style.css">
 <title>CAFE</title>
 </head>
-<body>
+<body class="theme-${ theme }">
 	<div class="background" id="home">
 		<div class="overlay">
-			<h1 id="greeting">Welcome to the javaBean!</h1>
+			<h2 id="greeting">Hello ${profile.firstname} ${profile.lastname} 
+								<br> Welcome to the javaBean!</h2>
 			<h1 id="register"><a href="/register-user">Register</a></h1>
 			<h1 id="shop"><a href="/javaBeanShop">Shop</a></h1>
 		</div>
+		<div class="profile"><a href="/edit-profile">Edit Profile</a>
 	</div>
 </body>
 </html>

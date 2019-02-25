@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../style.css">
 <title>javaBean shop</title>
 </head>
 <body>
@@ -17,23 +17,24 @@
 				<div class="quarter" id="header-center">Item</div>
 				<div class="quarter" id="header">Description</div>
 				<div class="eighth" id="header-center">Price</div>
-				<div class="eighth" id="header-center">Quantity</div>
+				<div class="cart" id="header-center">Add to Cart</div>
 			</div>
 		</fieldset>
-		</fieldset>
+		<fieldset>
 			<div><hr class="thick"></div>
 			<c:forEach var="item" items="${items}">
 				<div>
-					<div class="quarter" id="center"><a id="btn-sml" href="/javaBeanShop/${item.id}/">${item.name}</a></div>
+					<div class="quarter" id="center"><a id="btn-sml" href="/javaBeanShop/item/${item.id}/">${item.name}</a></div>
 					<div class="quarter">${item.description}</div>
-					<div class="eighth" id="center">${item.price}</div>
-					<div class="eighth" id="center">${item.quantity}</div>				
+					<div class="eighth" id="center">$${item.price}</div>	
+					<div class="cart"><a href="/javaBeanShop/cart/${item.id}/add"><img src="/images/cart.png" width="25%" height="25%"></img></a></div>
+					<div class="hr-list"></div>	
 				</div>
-				<div><hr class="list"></div>
 			</c:forEach>		
 		</fieldset>
-		<p style="bottom:5%">Return <a href="/">home</a>.</p>
 	</div>
+	<a id="clickbox-small" href="/javaBeanShop/cart"><div class="cowboy3">view cart</div></a>
+		<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>

@@ -155,45 +155,52 @@ fieldset {
 
 .quarter {
 	text-align:left;
-	padding-left:2.5%;
-	padding-right:2.5%;
-	padding-top:2.5%;
+	margin:auto;
+	padding:1%;
 	width:25%;
 	float:left;
 }
 
 .eighth {
 	text-align:left;
-	padding-left:2.5%;
-	padding-right:2.5%;
-	padding-top:2.5%;
+	margin:auto;
+	padding:1%;
 	width:12.5%;
 	float:left;
 }
 
-.name {
-	text-align:left;
-	padding-left:2.5%;
-	padding-right:2.5%;
-	padding-top:2.5%;
-	width:20%;
-	float:left;	
+.sixteenth {
+	text-align:center;
+	margin:auto;
+	padding:1%;
+	width:6.25%;
+	float:right;
 }
 
-.edit {
-	text-align:left;
-	font-size:1vw;
-	width:10%;
-	float:left;
-	border:1px solid black;
+.trash {
+	padding-left:1%;
+	padding-right:1%;
+	width:6.25%;
+	float:right;
 }
 
-.delete {
-	text-align:left;
-	font-size:1vw;
-	width:10%;
-	float:left;
-	border:1px solid black;
+.cart {
+	padding-left:1%;
+	padding-right:1%;
+	width:12.5%;
+	float:right;
+}
+
+.home {
+	position:absolute;
+	bottom:15%;
+	left:50%;
+}
+
+.profile {
+	position:absolute;
+	top:5%;
+	left:65%;
 }
 
 /************************** text *************************/
@@ -221,6 +228,11 @@ fieldset {
 	font-size:1.125vw;
 }
 
+.cowboy-link {
+	font-family:OlCowboy;
+	font-size:1.2vw;	
+}
+
 #header {
 	font-size:1.5vw;
 }
@@ -230,11 +242,16 @@ fieldset {
 	text-align:center;
 }
 
+#header-centerSml {
+	font-size:1vw;
+	text-align:center;
+}
+
 #center {
 	text-align:center;
 }
 
-/************************* input **************************/
+/************************* input & links **************************/
 
 form {
 	width:40%;
@@ -264,9 +281,10 @@ button {
 }
 
 #btn-delete {
-	text-align:center;
 	background:url(/images/trash.png) no-repeat;
 	background-size:cover;
+	width:7.5%;
+	height:10%;
 }
 
 #clickbox-lrg {
@@ -333,17 +351,11 @@ a {
 
 }
 
-.clear-float {
-	clear:left;
-	clear:right;
-}
-
-hr.list {
+.hr-list {
 	background-color:RGBA(55,35,15,0.125);
-	width:75%;
-	height:.125vw;
-	border:none;
 	float:left;
+	height:1px;
+	width:100%;
 }
 
 hr.thick {
@@ -355,4 +367,37 @@ hr.thick {
 
 #move-right {
 	margin-left:5%;
+}
+
+#bottom {
+	position:absolute;
+	bottom:5%;
+}
+
+#bottom-left {
+	position:absolute;
+	left:15%;
+	bottom:5%;
+}
+
+#bottom-center20 {
+	position:absolute;
+	left:40%;
+	bottom:5%;	
+}
+
+#bottom-right {
+	position:absolute;
+	right:5%;
+	bottom:5%;
+}
+
+#bottom-right-right {
+	position:absolute;
+	right:20%;
+	bottom:5%;
+}
+
+#scroll {
+	overflow-y:auto;
 }

@@ -13,6 +13,7 @@
 		<div class="cowboy1"><br>javaBean ADMIN</div>
 		<div class="cowboy2"><a class="admin-select" id="items" href="/admin/items">items</a></div>
 		<div class="cowboy2"><a class="admin-select" id="users" href="/admin/users">users</a></div>
+		<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>

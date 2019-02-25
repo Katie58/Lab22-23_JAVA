@@ -39,6 +39,11 @@ public class User {
 		this.password = password;
 	}
 	
+	public User(String firstname, String lastname) {
+		this.firstname = firstname;
+		this.lastname = lastname;
+	}
+	
 	public void setId(Long id) {
 		this.id = id;
 	}

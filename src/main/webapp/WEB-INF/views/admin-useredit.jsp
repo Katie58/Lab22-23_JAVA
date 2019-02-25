@@ -23,6 +23,7 @@
 		<button type="submit">Save Changes</button>
 		<a href="/admin/user/${user.id}/">Cancel</a>
 		</form>
+			<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>

@@ -25,6 +25,7 @@
 		<a class="center" id="center" style="width:30% bottom:5%" href="/admin/user/${user.id}/delete">Delete</a>
 		<a class="right" id="right" style="width:30% bottom:5%" href="/admin/users">Back to Users</a>
 	</form>
+		<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>

@@ -27,6 +27,7 @@
 		<a href="/admin/users">Cancel</a>
 		</fieldset>
 		</form>
+			<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>

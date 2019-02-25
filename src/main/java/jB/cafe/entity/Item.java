@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,18 +16,21 @@ public class Item {
 	private String name;
 	private String description;
 	private int quantity;
-	private double price;
+	private Double price;
+	
+//	@ManyToOne
+//	private Cart cart;
 
 	public Item() {}
 	
-	public Item(String name, String description, int quantity, double price) {
+	public Item(String name, String description, int quantity, Double price) {
 		this.name = name;
 		this.description = description;
 		this.quantity = quantity;
 		this.price = price;
 	}
 	
-	public Item(Long id, String name, String description, int quantity, double price) {
+	public Item(Long id, String name, String description, int quantity, Double price) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
@@ -50,7 +54,7 @@ public class Item {
 		this.quantity = quantity;
 	}
 	
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	

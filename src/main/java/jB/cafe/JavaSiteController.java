@@ -1,5 +1,6 @@
 package jB.cafe;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import jB.cafe.dao.ItemsDAO;
@@ -34,7 +36,7 @@ public class JavaSiteController {
 		return new ModelAndView("shop", "items", leListOfItems);
 	}
 	
-	@RequestMapping("/javaBeanShop/{id}/")
+	@RequestMapping("/javaBeanShop/item/{id}/")
 	public ModelAndView detail(@PathVariable("id") Long id) {
 		Item item = itemsDao.findById(id);
 		return new ModelAndView("item-details", "item", item);
@@ -83,7 +85,7 @@ public class JavaSiteController {
 		
 		itemsDao.update(item);
 		
-		return new ModelAndView("redirect:/admin/" + id);
+		return new ModelAndView("redirect:/admin/item/{id}/");
 	}
 		
 	@RequestMapping("/admin/item/{id}/delete")
@@ -131,7 +133,7 @@ public class JavaSiteController {
 		
 		usersDao.update(user);
 		
-		return new ModelAndView("redirect:/admin/" + id);
+		return new ModelAndView("redirect:/admin/user/{id}/");
 	}
 	
 	@RequestMapping("/admin/user/{id}/delete")

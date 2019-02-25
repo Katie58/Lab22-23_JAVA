@@ -11,16 +11,9 @@
 <body>
 <div class="background" id="background-image">
 	<div class="thanks">
-		<h1>Thanks.</h1>
-		
-		<p>
-			<%-- Dot notation to access getters in Expression Language. --%>
-			${ user.firstname }, you are registered. 
-			
-		</p>
-		<p>	
-			Return <a href="/">home</a>.
-		</p>
+		<h1>Thanks.</h1>	
+		<p>${user.firstname}, you are registered.</p>
+		<p>Return <a href="/">home</a>.</p>
 	</div>
 </div>
 </body>

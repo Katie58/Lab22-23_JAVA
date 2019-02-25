@@ -8,22 +8,30 @@
 <link rel="stylesheet" href="../../../style.css">
 <title>${item.name} details</title>
 </head>
-<body>
+<body onload="money()">
 	<div class="background" id="background-image">
-	<div class="cowboy1">${item.name}</div>
+	<div class="cowboy1"><br>${item.name}</div>
 	<form>		
 		<fieldset class="left"></fieldset>
 		<fieldset class="center">
 			<br><br><strong>&nbsp;&nbsp;&nbsp;Item Details</strong><br><hr>
 			<p><div class="form-left">Description:</div><div class="form-right">${item.description}</div></p>
 			<p><div class="form-left">Quantity:</div><div class="form-right">${item.quantity}</div></p>
-			<p><div class="form-left">Price:</div><div class="form-right">${item.price}"</div></p>
+			<p><div class="form-left">Price:</div><div class="form-right" id="money"></div></p>
 		</fieldset>
 		<fieldset class="right"></fieldset>
-		<a class="left" id="left" style="width:30% bottom:5%" href="/admin/item/${item.id}/edit">Edit</a>
-		<a class="center" id="center" style="width:30% bottom:5%" href="/admin/item/${item.id}/delete">Delete</a>
-		<a class="right" id="right" style="width:30% bottom:5%" href="/admin/items">Back to Shop</a>
+		<a class="clickbox-sml" id="bottom-right" href="/admin/item/${item.id}/edit"><div class="cowboy3">Edit</div></a>
+		<a class="clickbox-sml" id="bottom-right-right" href="/admin/item/${item.id}/delete"><div class="cowboy3">Delete</div></a>
+		<a class="clickbox-sml" id="bottom-center20" href="/admin/items"><div class="cowboy3">Back to Items</div></a>
 	</form>
-	</div>
+		<div class="home">Return <a href="/">home</a>.</div>
+	</div>	
+	<script>
+		function money() {
+		  var num = ${item.price};
+		  var n = num.toFixed(2);
+		  document.getElementById("money").innerHTML = '$' + n;
+		}
+	</script>
 </body>
 </html>

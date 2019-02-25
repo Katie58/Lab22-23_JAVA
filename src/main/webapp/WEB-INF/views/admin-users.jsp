@@ -38,6 +38,7 @@
 		</fieldset>
 		<div class="cowboy2"><a id="clickbox-lrg" href="/admin/user/add">add a user</a></div>
 	</div>
+		<div class="home">Return <a href="/">home</a>.</div>
 	</div>
 </body>
 </html>
