@@ -11,6 +11,7 @@
 <body class="theme-${ theme }">
 	<div class="background" id="home">
 		<div class="overlay">
+		<%@include file="partials/header.jsp" %>
 			<h2 id="greeting">Hello ${profile.firstname} ${profile.lastname} 
 								<br> Welcome to the javaBean!</h2>
 			<h1 id="register"><a href="/register-user">Register</a></h1>

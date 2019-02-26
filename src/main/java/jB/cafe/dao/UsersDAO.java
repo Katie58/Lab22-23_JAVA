@@ -61,10 +61,20 @@ public class UsersDAO {
 				.getResultList();
 	}
 	
-	public User findByName(String name) {
+	public User findByName(String firstname) {
 		try {
 			return em.createQuery("FROM Item WHERE name = :name", User.class)
-					.setParameter("name", name)
+					.setParameter("name", firstname)
+					.getSingleResult();
+		} catch (NoResultException ex) {
+			return null;
+		}
+	}
+	
+	public User findByGithubId(Long githubId) {
+		try {
+			return em.createQuery("FROM User WHERE githubId = :githubId", User.class)
+					.setParameter("githubId", githubId)
 					.getSingleResult();
 		} catch (NoResultException ex) {
 			return null;

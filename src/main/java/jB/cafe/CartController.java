@@ -14,43 +14,55 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import jB.cafe.entity.Item;
+import jB.cafe.dao.CartDAO;
 import jB.cafe.dao.ItemsDAO;
-import jB.cafe.entity.Cart;
+import jB.cafe.entity.CartItem;
 
 @Controller
 @SessionAttributes("cart")
 public class CartController {
 	
-	private Cart shoppingCart = new Cart();
+	@Autowired
+	private CartDAO cartDao;
 	
 	@Autowired
 	private ItemsDAO itemsDao;
 	
 	@RequestMapping("/javaBeanShop/cart")
 	public ModelAndView viewCart() {
-		HashMap<Item, Integer> items = shoppingCart.getCart();
-		return new ModelAndView("cart", "cart", items);
+		ModelAndView mav = new ModelAndView("cart");
+		List<CartItem> cart = cartDao.findAll();
+		List<Item> item = itemsDao.findAll();
+		
+		mav.addObject("cart", cart);
+		mav.addObject("item", item);
+		
+		return mav;
 	}
 	
 	@PostMapping("/javaBeanShop/cart")
-	public ModelAndView editCart(Cart shoppingCart, HttpSession session) {
+	public ModelAndView editCart(CartItem shoppingCart, HttpSession session) {
 		session.setAttribute("cart", shoppingCart);
 		return new ModelAndView("redirect:/javaBeanShop/cart");
 	}
 	
 	@RequestMapping("/javaBeanShop/cart/{id}/add")
-	public ModelAndView addToCart(@PathVariable("id") Long id, HttpSession session) {
+	public ModelAndView addToCart(@PathVariable("id") Long id) {
 		Item item = itemsDao.findById(id);
-		shoppingCart.addToCart(item);
-		session.setAttribute("cart", shoppingCart);
+		CartItem cartItem = new CartItem();
+		cartItem.setItem(item);
+		
+		cartDao.create(cartItem);
 		return new ModelAndView("redirect:/javaBeanShop/cart");
 	}
 	
-//	@RequestMapping("/javaBeanShop/cart/{id}/")
-//	public ModelAndView detail(@PathVariable("id") Long id) {
-//		Item item = itemsDao.findById(id);
-//		return new ModelAndView("item-details", "item", item);
-//	}
+	@RequestMapping("/javaBeanShop/cart/{id}/delete")
+	public ModelAndView deleteFromCart(@PathVariable("id") Long id) {
+		CartItem cartItem = new CartItem();
+		cartItem.setId(id);
+		cartDao.delete(cartItem);
+		return new ModelAndView("redirect:/javaBeanShop/cart");
+	}
 
 }
 

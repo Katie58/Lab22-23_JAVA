@@ -14,12 +14,21 @@ public class User {
 	private Long id;
 	private String firstname;
 	private String lastname;
+	private String name;
+	private String username;
 	private String email;
 	private int age;
 	private String password;
+	private Long githubId;
 	private boolean newsletter;
 	
 	public User() {}
+	
+	public User(String name, String username, String password) {
+		this.name = name;
+		this.username = username;
+		this.password = password;
+	}
 	
 	public User(Long id, String firstname, String lastname, String email, int age, String password, boolean newsletter) {
 		this.id = id;
@@ -42,6 +51,10 @@ public class User {
 	public User(String firstname, String lastname) {
 		this.firstname = firstname;
 		this.lastname = lastname;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public void setId(Long id) {
@@ -72,6 +85,10 @@ public class User {
 		this.newsletter = newsletter;
 	}
 	
+	public String getName() {
+		return name;
+	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -94,6 +111,20 @@ public class User {
 	
 	public String getPassword() {
 		return password;
+	}
+	
+	public Long getGithubId() {
+		return githubId;
+	}
+
+	public void setGithubId(Long githubId) {
+		this.githubId = githubId;
+		if (firstname == null) {
+			firstname = "John";
+		}
+		if (lastname == null) {
+			lastname = "Doe";
+		}
 	}
 	
 	public boolean getNewsletter() {
