@@ -10,6 +10,7 @@
 </head>
 <body>
 	<div class="background" id="background-image">
+	<%@include file="partials/header.jsp" %>
 	<div class="cowboy1"><br>SHOP</div>
 	<div class="shop-itemsboard">
 		<fieldset id="header">

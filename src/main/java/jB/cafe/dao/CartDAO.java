@@ -46,5 +46,9 @@ public class CartDAO {
 		em.remove(em.contains(cartItem) ? cartItem : em.merge(cartItem));
 	}
 	
+	public boolean contains(CartItem cartItem) {
+		return em.contains(cartItem);
+	}
+	
 }
 

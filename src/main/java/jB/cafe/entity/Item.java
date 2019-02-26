@@ -23,18 +23,18 @@ public class Item {
 
 	public Item() {}
 	
-	public Item(String name, String description, int quantity, Double price) {
+	public Item(String name, String description, int stock, Double price) {
 		this.name = name;
 		this.description = description;
-		this.stock = quantity;
+		this.stock = stock;
 		this.price = price;
 	}
 	
-	public Item(Long id, String name, String description, int quantity, Double price) {
+	public Item(Long id, String name, String description, int stock, Double price) {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.stock = quantity;
+		this.stock = stock;
 		this.price = price;
 	}
 	
@@ -50,8 +50,8 @@ public class Item {
 		this.description = description;
 	}
 	
-	public void setQuantity(int quantity) {
-		this.stock = quantity;
+	public void setStock(int stock) {
+		this.stock = stock;
 	}
 	
 	public void setPrice(Double price) {
@@ -70,7 +70,7 @@ public class Item {
 		return description;
 	}
 	
-	public int getQuantity() {
+	public int getStock() {
 		return stock;
 	}
 	

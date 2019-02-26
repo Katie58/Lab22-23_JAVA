@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -61,6 +62,15 @@ public class CartController {
 		CartItem cartItem = new CartItem();
 		cartItem.setId(id);
 		cartDao.delete(cartItem);
+		return new ModelAndView("redirect:/javaBeanShop/cart");
+	}
+	
+	@RequestMapping("/javaBeanShop/cart/{id}/update")
+	public ModelAndView updateQuantity(@PathVariable("id") Long id, @RequestParam("quantity") int quantity) {
+		CartItem cartItem = new CartItem();
+		cartItem = cartDao.findById(id);		
+		cartItem.setQuantity(quantity);
+		cartDao.update(cartItem);
 		return new ModelAndView("redirect:/javaBeanShop/cart");
 	}
 

@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="background" id="background-image">
+	<%@include file="partials/header.jsp" %>
 	<div class="cowboy1"><br>Profile</div>
 	<form action="/edit-profile" onsubmit="return validateForm()" method="post">
 		<fieldset class="left">			

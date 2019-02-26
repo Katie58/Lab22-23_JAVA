@@ -9,12 +9,13 @@
 <title>Confirmation</title>
 </head>
 <body>
-<div class="background" id="background-image">
-	<div class="thanks">
-		<h1>Thanks.</h1>	
-		<p>${user.firstname}, you are registered.</p>
-		<p>Return <a href="/">home</a>.</p>
+	<div class="background" id="background-image">
+		<%@include file="partials/header.jsp" %>
+		<div class="thanks">
+			<h1>Thanks.</h1>	
+			<p>${user.firstname}, you are registered.</p>
+			<p>Return <a href="/">home</a>.</p>
+		</div>
 	</div>
-</div>
 </body>
 </html>
